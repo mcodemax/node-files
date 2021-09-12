@@ -21,6 +21,7 @@ function webCat(url){
     }, (err) => {
         console.log(`Error fetching ${url}:`) 
         console.log(`   Error: Request failed with status code ${err}`);
+        process.exit(1);
     });
 };
 
@@ -36,7 +37,7 @@ function webCat(url){
 
 /**tells if str is url or  not */
 function isURL(str){
-    if(str.includes('https://' || 'http://'))
+    if(str.includes('https://') || str.includes('http://'))
         return true;
     return false;
 }
