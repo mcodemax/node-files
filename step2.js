@@ -11,7 +11,7 @@ function cat(path){
     });
 };
 
-function webCat(url){
+function webCat(url){ //equiv to the webCat in solns
     axios.get(url)
     .then((response) => {
         if(response.status === 200) {
@@ -33,7 +33,7 @@ function webCat(url){
 //       console.error(`Error fetching ${url}: ${err}`);
 //       process.exit(1);
 //     }
-//   }
+// }
 
 /**tells if str is url or  not */
 function isURL(str){
